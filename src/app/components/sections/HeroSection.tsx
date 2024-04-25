@@ -21,10 +21,8 @@ const HeroSection = () => {
             </p>
             <ul>
                 <li className="">
-                    <Link href={"/resume.pdf"} className="p-1 rounded-full bg-gradient-to-br from-zinc-300 to-zinc-200 w-fit block text-center">
-                        <span className="bg-zinc-900 hover:bg-zinc-800 rounded-full px-3 py-1 w-fit block text-sm md:text-xs">
+                    <Link href={"/resume.pdf"} className="px-2 py-1 rounded-lg border-zinc-200 border-[2.5px] w-fit block text-center hover:bg-zinc-800 text-sm md:text-xs">
                             My Resume
-                        </span>
                     </Link>
                 </li>
             </ul>
