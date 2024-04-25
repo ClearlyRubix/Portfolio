@@ -25,7 +25,7 @@ const Navbar = () => {
                     <div>
                         <div className="md:block hidden">
                             <ul className="inline-flex justify-between">
-                                    <li key="about" className="py-1 px-3"><Link href={"#about"} className="text-zinc-400 sm:text-xl rounded font-semibold hover:text-white">About</Link></li>
+                                    <li key="about" className="py-1 px-3"><Link href={"/#about"} className="text-zinc-400 sm:text-xl rounded font-semibold hover:text-white">About</Link></li>
                                     <li key="projects" className="py-1 px-3"><Link href={"/projects"} className="text-zinc-400 sm:text-xl rounded font-semibold hover:text-white">Projects</Link></li>
                                     <li key="contact" className="py-1 px-3"><Link href={"/contact"} className="text-zinc-400 sm:text-xl rounded font-semibold hover:text-white">Contact</Link></li>
                             </ul>
@@ -37,7 +37,7 @@ const Navbar = () => {
             {navDropDownEnabled ? (
                 <div className="md:hidden max-w-screen flex flex-col items-center">
                     <ul className="flex flex-col items-center">
-                        <li key="about"><Link href={"#about"} className="text-zinc-400 sm:text-xl rounded hover:text-white">About</Link></li>
+                        <li key="about"><Link href={"/#about"} className="text-zinc-400 sm:text-xl rounded hover:text-white">About</Link></li>
                         <li key="projects"><Link href={"/projects"} className="text-zinc-400 sm:text-xl rounded hover:text-white">Projects</Link></li>
                         <li key="contact"><Link href={"/contact"} className="text-zinc-400 sm:text-xl rounded hover:text-white">Contact</Link></li>
                     </ul>
