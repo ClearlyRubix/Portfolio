@@ -8,7 +8,7 @@ const Navbar = () => {
 
     return (
         <>
-        <nav className="border-b-zinc-800 border-b-2 border-x-transparent border-t-transparent">
+        <nav className="border-b-zinc-800 border-b-2 border-x-transparent border-t-transparent bg-zinc-900">
             <div className="bg-zinc-900 flex flex-wrap justify-between mx-auto items-center pt-2 pb-1 md:pb-2">
                 <div>
                     <Link href={"/"} className="text-2xl md:text-3xl text-zinc-200 font-bold uppercase tracking-widest inline-flex py-1 px-3">
