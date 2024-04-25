@@ -1,0 +1,51 @@
+"use client"
+import Link from "next/link"
+import { useState } from "react"
+
+
+const Navbar = () => {
+    const [navDropDownEnabled, setnavDropDownEnabled] = useState(false)
+
+    return (
+        <>
+        <nav className="border-b-zinc-800 border-b-2 border-x-transparent border-t-transparent">
+            <div className="bg-zinc-900 flex flex-wrap justify-between mx-auto items-center py-2">
+                <div>
+                    <Link href={"/"} className="text-2xl md:text-3xl text-white font-semibold inline-flex py-2 px-3">
+                        CAYDEN
+                    </Link>
+                </div>
+                <div className="w-auto">
+                    <button onClick={() => setnavDropDownEnabled(!navDropDownEnabled)} type="button" className="inline-flex items-center md:hidden text-zinc-400 p-4">
+                        <span className="sr-only">Open Menu</span>
+                        <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                        </svg>
+                    </button>
+                    <div>
+                        <div className="md:block hidden">
+                            <ul className="inline-flex justify-between">
+                                    <li key="about" className="py-2 px-3"><Link href={"/about"} className="text-zinc-400 sm:text-xl rounded hover:text-white">About</Link></li>
+                                    <li key="projects" className="py-2 px-3"><Link href={"/projects"} className="text-zinc-400 sm:text-xl rounded hover:text-white">Projects</Link></li>
+                                    <li key="contact" className="py-2 px-3"><Link href={"/contact"} className="text-zinc-400 sm:text-xl rounded hover:text-white">Contact</Link></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            {navDropDownEnabled ? (
+                <div className="md:hidden max-w-screen flex flex-col items-center">
+                    <ul className="flex flex-col items-center">
+                        <li key="about"><Link href={"/about"} className="text-zinc-400 sm:text-xl rounded hover:text-white">About</Link></li>
+                        <li key="projects"><Link href={"/projects"} className="text-zinc-400 sm:text-xl rounded hover:text-white">Projects</Link></li>
+                        <li key="contact"><Link href={"/contact"} className="text-zinc-400 sm:text-xl rounded hover:text-white">Contact</Link></li>
+                    </ul>
+                </div>
+            ):<></>}
+        </nav>
+        </>
+    )
+}
+
+export default Navbar
