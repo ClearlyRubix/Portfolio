@@ -4,6 +4,9 @@ const FeaturedProjectsSection = () => {
             <span className="text-xl uppercase font-bold tracking-widest">
                 Featured Projects
             </span>
+            <div>
+                
+            </div>
         </div>
     )
 }
