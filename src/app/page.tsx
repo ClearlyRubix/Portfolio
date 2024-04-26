@@ -6,8 +6,8 @@ import HeroSection from "./components/sections/HeroSection";
 export default function Home() {
   
     return (
-        <main className="">
-            <div className="flex flex-col md:flex-row">
+        <main className="w-full">
+            <div className="flex flex-col md:flex-row w-full">
                 <div className="basis-1/2 self-stretch">
                     <HeroSection />
                 </div>
