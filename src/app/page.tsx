@@ -8,18 +8,18 @@ export default function Home() {
   
     return (
         <main className="w-full">
-            <div className="flex flex-col md:flex-row w-full items-stretch">
+            <div className="flex flex-col md:flex-row w-full items-stretch flex-wrap">
                 <div className="basis-1/2">
                     <HeroSection />
                 </div>
                 <div className="basis-1/2">
                     <AboutSection/>
                 </div>
+                <div className="basis-full">
+                    <FeaturedProjectsSection/>
+                </div>
             </div>
-            <div>
-                <FeaturedProjectsSection/>
-                Test
-            </div>
+            
         </main>
     );
 }
