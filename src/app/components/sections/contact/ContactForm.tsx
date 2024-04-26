@@ -39,7 +39,7 @@ const ContactForm = () => {
     }
 
     return (
-        <div id="contact" className="flex flex-col border-2 border-zinc-800 rounded m-4 p-4 h-full">
+        <div id="contact" className="flex flex-col border-2 border-zinc-800 rounded m-4 p-4">
             <h2 className="font-bold text-sm text-zinc-100 uppercase tracking-widest pb-6">
                 Contact Me
             </h2>
