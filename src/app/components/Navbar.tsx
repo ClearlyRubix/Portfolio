@@ -25,9 +25,9 @@ const Navbar = () => {
                     <div>
                         <div className="md:block hidden">
                             <ul className="inline-flex justify-between">
-                                    <li key="about" className="py-1 px-3 transition-transform hover:-translate-y-1"><Link href={"/#about"} className="text-zinc-400 sm:text-xl rounded font-semibold hover:text-white">About</Link></li>
-                                    <li key="projects" className="py-1 px-3 transition-transform hover:-translate-y-1"><Link href={"/projects"} className="text-zinc-400 sm:text-xl rounded font-semibold hover:text-white">Projects</Link></li>
-                                    <li key="contact" className="py-1 px-3 transition-transform hover:-translate-y-1"><Link href={"/contact"} className="text-zinc-400 sm:text-xl rounded font-semibold hover:text-white">Contact</Link></li>
+                                    <li key="about" className="transition-transform hover:-translate-y-1"><Link href={"/#about"} className="text-zinc-400 sm:text-xl rounded font-semibold hover:text-white mx-3 my-1">About</Link></li>
+                                    <li key="projects" className="transition-transform hover:-translate-y-1"><Link href={"/projects"} className="text-zinc-400 sm:text-xl rounded font-semibold hover:text-white mx-3 my-1">Projects</Link></li>
+                                    <li key="contact" className="transition-transform hover:-translate-y-1"><Link href={"/contact"} className="text-zinc-400 sm:text-xl rounded font-semibold hover:text-white mx-3 my-1">Contact</Link></li>
                             </ul>
                         </div>
                     </div>
