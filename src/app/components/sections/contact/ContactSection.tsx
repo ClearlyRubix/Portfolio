@@ -8,10 +8,10 @@ const ContactSection = () => {
         <>
         <div id="contact" className="flex flex-col border-2 border-zinc-800 rounded m-4 p-4 h-full">
             <h2 className="font-bold text-sm text-zinc-100 uppercase tracking-widest pb-6">
-                Contact Me
+                Let&#39;s Connect
             </h2>
             <ContactText/> 
-            <ul className="flex items-center mt-12 md:mt-auto">
+            <ul className="flex items-center md:mt-auto">
                 <li className="mr-5 shrink-0 transition-transform hover:-translate-y-1">
                     <Link className="hover:text-zinc-200" href={"https://www.linkedin.com/in/caydenbatten/"} target="_blank" title="LinkedIn">
                         <IconLinkedIn feather={true}/>
