@@ -21,8 +21,8 @@ const HeroSection = () => {
             </p>
             <ul>
                 <li className="">
-                    <Link href={"/resume.pdf"} className="px-2 py-1 rounded-lg border-zinc-200 border-[2.5px] w-fit block text-center hover:bg-zinc-800 text-sm md:text-xs">
-                            My Resume
+                    <Link href={"/contact"} className="px-2 py-1 rounded-lg border-zinc-200 border-[2.5px] w-fit block text-center hover:bg-zinc-800 text-sm md:text-xs">
+                            Contact Me
                     </Link>
                 </li>
             </ul>
