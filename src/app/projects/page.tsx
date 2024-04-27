@@ -1,28 +1,37 @@
 import Image from "next/image";
 import ProjectItem from "../components/sections/projects/ProjectItem";
+import { getSortedPostsData } from "../../../lib/posts";
 
-
+// type allProjectData = {
+//     title: String;
+//     date: String;
+//     short_description: String;
+//     thumbnail: String;
+// }[]
 
 export default function Projects() {
+    const allProjectData = getSortedPostsData()
     return (
         <main className="w-full">
-            <div className="flex flex-col md:flex-row items-stretch flex-wrap gap-y-16 gap-x-16 justify-between p-4">
-                <div>
-                    <ProjectItem title={"Title Text"} short_description={"Description Text"} date={"YYYY-MM-DD"} img_src={"/test%20image.png"}/>
-                </div>
-                <div>
-                    <ProjectItem title={"Title Text"} short_description={"Description Text"} date={"YYYY-MM-DD"} img_src={"/test%20image.png"}/>
-                </div>
-                <div>
-                    <ProjectItem title={"Title Text"} short_description={"Description Text"} date={"YYYY-MM-DD"} img_src={"/test%20image.png"}/>
-                </div>
-                <div>
-                    <ProjectItem title={"Title Text"} short_description={"Description Text"} date={"YYYY-MM-DD"} img_src={"/test%20image.png"}/>
-                </div>
-                <div>
-                    <ProjectItem title={"Title Text"} short_description={"Description Text"} date={"YYYY-MM-DD"} img_src={"/test%20image.png"}/>
-                </div>
+            {allProjectData.length > 0 ? 
+            <div className="flex flex-col md:flex-row items-stretch flex-wrap gap-y-16 gap-x-16 justify-center p-4">
+                {
+                    allProjectData.map((project) => (
+                        <div key={project.id}>
+                            <ProjectItem id={project.id} title={project.title} date={project.date} short_description={project.short_description} img_src={project.thumbnail}/>
+                        </div>
+                    ))
+                }
             </div>
-        </main>
+            :
+            <div> 
+                No Posts found
+            </div>
+            }
+
+           
+        
+            
+        </main> 
     );
 }
