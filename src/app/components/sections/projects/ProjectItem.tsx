@@ -1,8 +1,8 @@
 import Link from "next/link"
 
-const ProjectItem = ({ title, date, short_description, img_src }: { title: String, date: String, short_description: String, img_src: String }) => {
+const ProjectItem = ({ id, title, date, short_description, img_src }: { id:string, title: string, date: string, short_description: string, img_src: string }) => {
     return(
-        <Link href={"/project/"+title}>
+        <Link href={"/project/"+ id}>
             {/* Image Div */}
             <div className={"rounded-lg w-full h-52 md:w-[575px] md:h-80 group flex flex-col justify-end"}
             style={{ background: `url(${img_src})`, backgroundSize: "cover" }}>

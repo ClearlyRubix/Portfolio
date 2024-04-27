@@ -1,6 +1,8 @@
 ---
-title: 'Two Forms of Pre-rendering'
-date: '2020-01-01'
+title: "Title Text"
+date: "2020-01-01"
+short_description: "Short Description Text"
+thumbnail: "/testImage.png"
 ---
 
 Yabba dabba do
