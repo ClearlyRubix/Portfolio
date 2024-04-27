@@ -9,7 +9,7 @@ import IconLinkedIn from "../icons/IconLinkedIn"
 const HeroSection = () => {
     return (
         <div className="flex flex-col border-2 border-zinc-800 rounded m-4 p-4">
-            <h1 className="text-zinc-200 font-bold text-4xl tracking-tighter mb-4">
+            <h1 className="text-zinc-200 font-bold text-4xl tracking-tight mb-4">
                 Cayden Batten
             </h1>
             <h2 className="font-semibold text-zinc-200 mb-4">
