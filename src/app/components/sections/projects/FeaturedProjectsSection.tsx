@@ -1,7 +1,22 @@
 import Link from "next/link"
 import IconArrowRight from "../../icons/IconArrowRight"
+import { getSortedFeaturedPostsData } from "../../../../../lib/posts";
+import ProjectItem from "./ProjectItem";
+
+
+type ProjectData = {
+    date: string; 
+    title: string; 
+    short_description: string; 
+    thumbnail: string;
+    featured: boolean;
+}[]
 
 const FeaturedProjectsSection = () => {
+
+    const featuredProjects = getSortedFeaturedPostsData()
+    // console.log(featuredProjects)
+
     return (
         // Header
         <div className="mt-10 px-4">
@@ -26,7 +41,23 @@ const FeaturedProjectsSection = () => {
 
             {/* Projects */}
             <div>
-                THINGS!
+                
+                {featuredProjects.length > 0 ?
+                    <div>
+                        {
+                            featuredProjects.map((project) => ( 
+                                <div key={project.id}>
+                                    <ProjectItem title={project.title} date={project.date} id={project.id} short_description={project.short_description} img_src={project.thumbnail}/>
+                                </div>
+                            ))
+                        }
+                    </div>
+                :
+                    <div>
+                        No Featured Projects Found
+                    </div>    
+                }
+                
             </div>
         </div>
     )
