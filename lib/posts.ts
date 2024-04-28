@@ -99,3 +99,19 @@ export function getSortedFeaturedPostsData() {
         }
     });
 }
+
+export function getProjectContentById(id: string) {
+        // Read markdown file as string
+        const fullPath = path.join(projectsDirectory, id+".md");
+        // /Users/ef/Desktop/nextjs-blog/posts/pre-rendering.md
+        const fileContents = fs.readFileSync(fullPath, "utf8"); // .md string content
+
+        // Use gray-matter to parse the post metadata section
+        const matterResult = matter(fileContents);
+
+        // Combine the data with the id
+        return {
+        id:id,
+        content: matterResult.content
+        };
+    };

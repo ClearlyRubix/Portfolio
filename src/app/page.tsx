@@ -13,7 +13,7 @@ export default function Home() {
                 <div className="basis-1/2">
                     <AboutSection/>
                 </div>
-                <div className="basis-full">
+                <div className="basis-full pb-3">
                     <FeaturedProjectsSection/>
                 </div>
             </div>
