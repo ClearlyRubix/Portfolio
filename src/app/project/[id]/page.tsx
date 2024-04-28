@@ -13,7 +13,6 @@ export async function generateStaticParams() {
 
 export default function Project({ params }: { params: {id: string}}) {
     const project = getProjectById(params.id)
-    console.log(project)
     return (
         <main className="">
             <div className="flex flex-col md:flex-row">

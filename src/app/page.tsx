@@ -1,5 +1,3 @@
-"use client"
-
 import AboutSection from "./components/sections/about/AboutSection";
 import HeroSection from "./components/sections/HeroSection";
 import FeaturedProjectsSection from "./components/sections/projects/FeaturedProjectsSection";

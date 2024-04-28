@@ -5,5 +5,3 @@ short_description: "Short Description Text"
 thumbnail: "/testImage.png"
 featured: true
 ---
-
-Yabba dabba do
