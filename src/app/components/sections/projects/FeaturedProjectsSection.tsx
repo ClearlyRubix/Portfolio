@@ -16,7 +16,7 @@ const FeaturedProjectsSection = () => {
     // console.log(featuredProjects)
 
     return (
-        <div className="mt-10 px-4">
+        <div id="featured-projects" className="mt-10 px-4">
             {/* Header */}
             <div className="flex flex-col md:flex-row justify-between md:items-center">
                 <div className="md:w-1/3"></div>

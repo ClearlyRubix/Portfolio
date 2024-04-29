@@ -3,7 +3,7 @@ const ContactText = () => {
         <>
         <div>
             <p className="">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lectus leo, varius id erat in, scelerisque tempor purus.
+                Drop me a message. Whether you have a question or just want to say hi, I&#39;ll try my best to get back to you!
             </p>
         </div>
         </>
