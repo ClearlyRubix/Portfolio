@@ -26,9 +26,9 @@ const Navbar = () => {
                     <div className="inline">
                         <div className="md:block hidden">
                             <ul className="inline-flex justify-between">
-                                    <li key="about" className="transition-transform hover:-translate-y-1"><Link href={"/#about"} className="text-zinc-400 sm:text-xl rounded font-semibold hover:text-white mx-3 my-1">About</Link></li>
-                                    <li key="projects" className="transition-transform hover:-translate-y-1"><Link href={"/projects"} className="text-zinc-400 sm:text-xl rounded font-semibold hover:text-white mx-3 my-1">Projects</Link></li>
-                                    <li key="contact" className="transition-transform hover:-translate-y-1"><Link href={"/contact"} className="text-zinc-400 sm:text-xl rounded font-semibold hover:text-white mx-3 my-1">Contact</Link></li>
+                                    <li key="about" className="transition-transform hover:-translate-y-1"><Link href={"/#about"} className="text-zinc-400 sm:text-xl rounded font-semibold hover:text-zinc-200 mx-3 my-1">About</Link></li>
+                                    <li key="projects" className="transition-transform hover:-translate-y-1"><Link href={"/projects"} className="text-zinc-400 sm:text-xl rounded font-semibold hover:text-zinc-200 mx-3 my-1">Projects</Link></li>
+                                    <li key="contact" className="transition-transform hover:-translate-y-1"><Link href={"/contact"} className="text-zinc-400 sm:text-xl rounded font-semibold hover:text-zinc-200 mx-3 my-1">Contact</Link></li>
                             </ul>
                         </div>
                     </div>
@@ -38,9 +38,9 @@ const Navbar = () => {
             {navDropDownEnabled ? (
                 <div className="md:hidden max-w-screen flex flex-col items-center">
                     <ul className="flex flex-col items-center">
-                        <li key="about"><Link href={"/#about"} className="text-zinc-400 sm:text-xl rounded hover:text-white">About</Link></li>
-                        <li key="projects"><Link href={"/projects"} className="text-zinc-400 sm:text-xl rounded hover:text-white">Projects</Link></li>
-                        <li key="contact"><Link href={"/contact"} className="text-zinc-400 sm:text-xl rounded hover:text-white">Contact</Link></li>
+                        <li key="about"><Link href={"/#about"} className="text-zinc-400 sm:text-xl rounded hover:text-zinc-200">About</Link></li>
+                        <li key="projects"><Link href={"/projects"} className="text-zinc-400 sm:text-xl rounded hover:text-zinc-200">Projects</Link></li>
+                        <li key="contact"><Link href={"/contact"} className="text-zinc-400 sm:text-xl rounded hover:text-zinc-200">Contact</Link></li>
                     </ul>
                 </div>
             ):<></>}
