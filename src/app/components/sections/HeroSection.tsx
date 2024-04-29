@@ -15,8 +15,8 @@ const HeroSection = () => {
             <h2 className="font-semibold text-zinc-200 mb-4">
                 Electrical Engineering Student
             </h2>
-            <p className="max-w-xs mb-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed.
+            <p className="mb-4">
+                I ocasionally make things and when I do they usually end up here in some form.
             </p>
             <ul>
                 <li className="">
