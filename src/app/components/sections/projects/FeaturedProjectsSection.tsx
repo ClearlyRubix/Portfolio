@@ -40,7 +40,7 @@ const FeaturedProjectsSection = () => {
             {/* Projects */}
             <div>
                 {featuredProjects.length > 0 ? (
-                    <div className="flex flex-col md:flex-row items-stretch flex-wrap gap-y-8 md:gap-y-16 gap-x-16 justify-center p-4">
+                    <div className="flex flex-col md:flex-row items-stretch flex-wrap gap-y-8 gap-x-8 justify-center p-4">
                         {featuredProjects.map((project) => (
                             <div key={project.id}>
                                 <ProjectItem
