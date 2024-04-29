@@ -11,8 +11,8 @@ export async function POST(req: NextRequest, res: NextResponse) {
     const {email, subject, message} = await req.json()
     
     const { data, error } = await resend.emails.send({
-        from: "contact@clearlyrubix.com",
-        to: ["ccbatten04@gmail.com"],
+        from: "contact@caydenbatten.com",
+        to: ["contact@caydenbatten.com"],
         subject: subject,
         react: EmailTemplate({email: email, subject:subject, message})
     });
