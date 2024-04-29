@@ -25,11 +25,11 @@ const FeaturedProjectsSection = () => {
                 </span>
                 <div className="md:w-1/3 flex flex-col md:flex-row justify-end pr-3">
                     <Link href={"/projects"}>
-                        <div className="flex flex-row items-center">
-                            <div className="inline-block mr-2 text-xs uppercase font-bold tracking-wider">
+                        <div className="flex flex-row items-center group">
+                            <div className="inline-block mr-2 text-xs uppercase font-bold tracking-wider group-hover:text-zinc-200">
                                 All Projects
                             </div>
-                            <div className="inline-block">
+                            <div className="inline-block group-hover:animate-bouncex group-hover:text-zinc-200">
                                 <IconArrowRight />
                             </div>
                         </div>
@@ -40,7 +40,7 @@ const FeaturedProjectsSection = () => {
             {/* Projects */}
             <div>
                 {featuredProjects.length > 0 ? (
-                    <div className="flex flex-col md:flex-row items-stretch flex-wrap gap-y-8 md:gap-y-16 gap-x-16 justify-center p-4">
+                    <div className="flex flex-col md:flex-row items-stretch flex-wrap gap-y-8 gap-x-8 justify-center p-4">
                         {featuredProjects.map((project) => (
                             <div key={project.id}>
                                 <ProjectItem
