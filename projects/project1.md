@@ -2,7 +2,7 @@
 title: "Title Text"
 date: "2020-01-01"
 short_description: "Short Description Text"
-thumbnail: "/testImage.png"
+thumbnail: "/4_3_test.jpg"
 featured: true
 ---
 

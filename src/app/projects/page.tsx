@@ -25,7 +25,7 @@ export default function Projects() {
             </div>
             :
             <div> 
-                No Posts found
+                No Projects found
             </div>
             }
 
