@@ -1,7 +1,7 @@
 "use client"
 import Link from "next/link"
 import { useState } from "react"
-
+import ScrollToTopButton from "./ScrollToTopButton"
 
 const Navbar = () => {
     const [navDropDownEnabled, setnavDropDownEnabled] = useState(false)
@@ -45,6 +45,7 @@ const Navbar = () => {
                 </div>
             ):<></>}
         </nav>
+        <ScrollToTopButton/>
         </>
     )
 }
