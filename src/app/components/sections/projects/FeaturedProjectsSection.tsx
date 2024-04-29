@@ -25,11 +25,11 @@ const FeaturedProjectsSection = () => {
                 </span>
                 <div className="md:w-1/3 flex flex-col md:flex-row justify-end pr-3">
                     <Link href={"/projects"}>
-                        <div className="flex flex-row items-center">
+                        <div className="flex flex-row items-center group">
                             <div className="inline-block mr-2 text-xs uppercase font-bold tracking-wider">
                                 All Projects
                             </div>
-                            <div className="inline-block">
+                            <div className="inline-block group-hover:animate-bouncex">
                                 <IconArrowRight />
                             </div>
                         </div>
