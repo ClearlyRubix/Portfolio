@@ -21,6 +21,7 @@ export default async function Project({ params }: { params: {id: string}}) {
     const content = getProjectContentById(params.id).content
     const processsedContent = await remark().use(remarkHtml).process(content)
     const contentHtml = processsedContent.toString()
+    console.log(contentHtml)
 
     return (
         <main className="w-full p-4">
@@ -33,12 +34,12 @@ export default async function Project({ params }: { params: {id: string}}) {
                     <h2 className="inline font-semibold text-base">
                         {project.date}
                     </h2>
-                    <p>
+                    <p className="text-base">
                         {project.short_description}
                     </p>
                 </div>
             </div>
-            <div className="pt-2 prose prose-zinc prose-invert" dangerouslySetInnerHTML={{__html: contentHtml}}>
+            <div className="pt-2 prose max-w-none prose-zinc prose-invert w-full" dangerouslySetInnerHTML={{__html: contentHtml}}>
 
             </div>
         </main>
