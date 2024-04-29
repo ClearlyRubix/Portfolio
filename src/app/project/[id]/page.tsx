@@ -21,7 +21,6 @@ export default async function Project({ params }: { params: {id: string}}) {
     const content = getProjectContentById(params.id).content
     const processsedContent = await remark().use(remarkHtml).process(content)
     const contentHtml = processsedContent.toString()
-    console.log(contentHtml)
 
     return (
         <main className="w-full p-4">
