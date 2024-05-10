@@ -24,7 +24,7 @@ const ContactForm = () => {
 
         if (email == null || subject == null || message == null) {
             
-            //setSendButtonDisabled(false)
+            setSendButtonDisabled(false)
             setEmailError(true);
             setEmailSubmitted(false);
             setErrorMessage("There was a problem sending the email. Make sure all fields are filled in.")
@@ -33,7 +33,7 @@ const ContactForm = () => {
 
         if (email?.toString().length == 0 || subject?.toString().length == 0 || message?.toString().length == 0) {
             
-            //setSendButtonDisabled(false)
+            setSendButtonDisabled(false)
             setEmailError(true);
             setEmailSubmitted(false);
             setErrorMessage("There was a problem sending the email. Make sure all fields are filled in.")
@@ -123,9 +123,6 @@ const ContactForm = () => {
                                 name="message"
                                 className="block w-full bg-zinc-800 border-2 border-zinc-200 rounded-md p-2"
                             />
-                        </div>
-                        <div>
-                            sendButtonDisabled: {sendButtonDisabled.toString()}
                         </div>
                         {sendButtonDisabled ? (
                             <div>
