@@ -25,7 +25,7 @@ export default async function Project({ params }: { params: {id: string}}) {
     .use(remarkUnwrapImages)
     .process(content)
     const contentHtml = String(processsedContent)
-    console.log(contentHtml)
+
     return (
         <main className="w-full p-4">
             <div className="flex flex-col-reverse md:flex-row ">
