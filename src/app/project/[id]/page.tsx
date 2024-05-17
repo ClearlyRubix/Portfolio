@@ -2,8 +2,8 @@ import { getProjectById, getProjectContentById, getSortedPostsData } from "../..
 import Image from "next/image"
 
 import { remark } from "remark"
+import remarkUnwrapImages from 'remark-unwrap-images'
 import remarkHtml from "remark-html"
-import remarkUnwrapImages from "remark-unwrap-images"
 
 
 type ProjectData = { date: String; title: String; short_description: String; thumbnail: String }[]
@@ -20,9 +20,12 @@ export async function generateStaticParams() { // get's all the possible project
 export default async function Project({ params }: { params: {id: string}}) {
     const project = getProjectById(params.id)
     const content = getProjectContentById(params.id).content
-    const processsedContent = await remark().use(remarkHtml).use(remarkUnwrapImages).process(content)
-    const contentHtml = processsedContent.toString()
-
+    const processsedContent = await remark()
+    .use(remarkHtml)
+    .use(remarkUnwrapImages)
+    .process(content)
+    const contentHtml = String(processsedContent)
+    console.log(contentHtml)
     return (
         <main className="w-full p-4">
             <div className="flex flex-col-reverse md:flex-row ">
