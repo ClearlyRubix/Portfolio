@@ -3,6 +3,7 @@ import Image from "next/image"
 
 import { remark } from "remark"
 import remarkHtml from "remark-html"
+import remarkUnwrapImages from "remark-unwrap-images"
 
 
 type ProjectData = { date: String; title: String; short_description: String; thumbnail: String }[]
@@ -19,7 +20,7 @@ export async function generateStaticParams() { // get's all the possible project
 export default async function Project({ params }: { params: {id: string}}) {
     const project = getProjectById(params.id)
     const content = getProjectContentById(params.id).content
-    const processsedContent = await remark().use(remarkHtml).process(content)
+    const processsedContent = await remark().use(remarkHtml).use(remarkUnwrapImages).process(content)
     const contentHtml = processsedContent.toString()
 
     return (
@@ -38,7 +39,8 @@ export default async function Project({ params }: { params: {id: string}}) {
                     </p>
                 </div>
             </div>
-            <div className="pt-2 prose max-w-none prose-zinc prose-invert w-full" dangerouslySetInnerHTML={{__html: contentHtml}}>
+            <div className="pt-2 prose max-w-none prose-zinc prose-invert w-full flex flex-col
+            [&_img]:md:w-1/2 [&_img]:w-full [&_img]:self-center" dangerouslySetInnerHTML={{__html: contentHtml}}>
 
             </div>
         </main>
