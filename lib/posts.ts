@@ -19,7 +19,7 @@ export function getSortedPostsData() {
     // Get the data from each file
     const allProjectsData = fileNames.map((filename) => {
     // Remove ".md" from file name to get id
-        const id = filename.replace(/\.md$/, ""); // id = 'pre-rendering', 'ssg-ssr'
+        const id = filename.replace(/\.mdx$/, ""); // id = 'pre-rendering', 'ssg-ssr'
 
         // Read markdown file as string
         const fullPath = path.join(projectsDirectory, filename);
@@ -47,7 +47,7 @@ export function getSortedPostsData() {
 }
 
 export function getProjectById (id: string) {
-    const fullPath = path.join(projectsDirectory, id+".md");
+    const fullPath = path.join(projectsDirectory, id+".mdx");
     // /Users/ef/Desktop/nextjs-blog/posts/pre-rendering.md
     const fileContents = fs.readFileSync(fullPath, "utf8"); // .md string content
 
@@ -69,7 +69,7 @@ export function getSortedFeaturedPostsData() {
     // Get the data from each file
     const allProjectsData = fileNames.map((filename) => {
     // Remove ".md" from file name to get id
-        const id = filename.replace(/\.md$/, ""); // id = 'pre-rendering', 'ssg-ssr'
+        const id = filename.replace(/\.mdx$/, ""); // id = 'pre-rendering', 'ssg-ssr'
 
         // Read markdown file as string
         const fullPath = path.join(projectsDirectory, filename);
@@ -102,7 +102,7 @@ export function getSortedFeaturedPostsData() {
 
 export function getProjectContentById(id: string) {
         // Read markdown file as string
-        const fullPath = path.join(projectsDirectory, id+".md");
+        const fullPath = path.join(projectsDirectory, id+".mdx");
         // /Users/ef/Desktop/nextjs-blog/posts/pre-rendering.md
         const fileContents = fs.readFileSync(fullPath, "utf8"); // .md string content
 

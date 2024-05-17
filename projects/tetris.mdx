@@ -1,0 +1,73 @@
+---
+title: "Tetris - Arduino"
+date: "2022-03-22"
+short_description: "I re-created Tetris on an Arduino Mega"
+thumbnail: ""
+featured: true
+---
+
+# Introduction
+For one of my first year group design courses we were required to make a handheld video game. We wanted to make a game that could be picked up with little introduction so we brainstormed some popular games and genres of the past such as pong, brick-breaker, snake, or a platformer. We ended up choosing Tetris.
+
+Given the game's age and popularity, we knew it would be easy for anyone to pickup and understand the goal and some basic controls without needing a tutorial or guide.
+
+# Design
+The main provided resources were an Arduino Mega, a TFT Display, various 7-segment displays, switches, buttons, speakers, sensors for nearly everything, and access to 3D-Printers.
+
+The body of the casing was designed in [Fusion360](https://www.autodesk.com/ca-en/products/fusion-360/overview) and was decided to be vertical or portrait style casiing that opens like a shoebox with the entire back side being removable.
+
+<div class="my-0 flex md:flex-row flex-col justify-evenly">
+    <div class="px-4">
+        <img class="mb-0" src="/Tetris/top_shell_v12%20v4.png"/>
+        <div class="text-center">Top Shell</div>
+    </div>
+    <div class="px-4">
+        <img class="mb-0" src="/Tetris/back_plate_v3%20v4.png"/>
+        <div class="text-center">Back Plate</div>
+    </div>
+    <div class="px-4">
+        <img class="mb-0" src="/Tetris/joint%20v11.png"/>
+        <div class="text-center">Pin Lock</div>
+    </div>
+</div>
+
+The design consists of a 5 button d-pad for controls, the main display (3.5" TFT Display), 4 digit 7-segment display, speaker (top portion), and a power switch. The back plate was originally designed to be friction fit however we discoverd after multiple re-prints that the 3D-Printers wouldn't always provide the same tolerance so some pin locks were designed to hold the back plate on.
+
+# Code
+This started with getting the play area and a block to display anywhere on the grid. Afterwards, we could create any shape and choose a center point to rotate around by using (x,y) -> (-y,x).
+
+<div class="my-0 flex md:flex-row flex-col justify-center">
+    <div class="px-4">
+        <img class="mb-0 w-3/4 mx-auto" src="/Tetris/block_falling.gif"/>
+        <div class="text-center">Shape Falling</div>
+    </div>
+    <div class="px-4">
+        <img class="mb-0 w-3/4 mx-auto" src="/Tetris/block_rotating.gif"/>
+        <div class="text-center">Shape Rotating</div>
+    </div>
+</div>
+
+The grid is represented as a 2D array of integers. Different integers represent different block state. 0 is empty, 1 is locked, 2 is the current pieces, 3 is the center of the current piece. After getting blocks to fall and rotate as well as adding a store mechanic, ability to see the next shape, and a score counter. It was time to put the game together.
+
+<div class="my-0 flex md:flex-row flex-col justify-center">
+    <div class="px-4">
+        <img class="mb-0 w-3/4 mx-auto" src="/Tetris/game_area.jpg"/>
+        <div class="text-center">Game Area</div>
+    </div>
+    <div class="px-4">
+        <img class="mb-0 w-3/4 mx-auto" src="/Tetris/"/>
+        <div class="text-center">Title Screen</div>
+    </div>
+    <div class="px-4">
+        <img class="mb-0 w-3/4 mx-auto" src="/Tetris/"/>
+        <div class="text-center">End Screen</div>
+    </div>
+</div>
+
+After some tricky code to get the 7-segment display to refresh the way we wanted the game was polished. See demo below.
+
+<div class="px-4">
+        <img class="mb-0 w-3/4 mx-auto" src="/Tetris/"/>
+        <div class="text-center">Gameplay</div>
+</div>
+

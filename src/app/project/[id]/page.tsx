@@ -21,7 +21,7 @@ export default async function Project({ params }: { params: {id: string}}) {
     const project = getProjectById(params.id)
     const content = getProjectContentById(params.id).content
     const processsedContent = await remark()
-    .use(remarkHtml)
+    .use(remarkHtml, {sanitize: false})
     .use(remarkUnwrapImages)
     .process(content)
     const contentHtml = String(processsedContent)
@@ -43,7 +43,7 @@ export default async function Project({ params }: { params: {id: string}}) {
                 </div>
             </div>
             <div className="pt-2 prose max-w-none prose-zinc prose-invert w-full flex flex-col
-            [&_img]:md:w-1/3 [&_img]:w-full [&_img]:self-center *:my-4" dangerouslySetInnerHTML={{__html: contentHtml}}>
+                prose-headings:my-4 prose-p:my-4" dangerouslySetInnerHTML={{__html: contentHtml}}>
 
             </div>
         </main>
