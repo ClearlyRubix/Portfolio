@@ -43,7 +43,7 @@ export default async function Project({ params }: { params: {id: string}}) {
                 </div>
             </div>
             <div className="pt-2 prose max-w-none prose-zinc prose-invert w-full flex flex-col
-            [&_img]:md:w-1/2 [&_img]:w-full [&_img]:self-center" dangerouslySetInnerHTML={{__html: contentHtml}}>
+            [&_img]:md:w-1/3 [&_img]:w-full [&_img]:self-center *:my-4" dangerouslySetInnerHTML={{__html: contentHtml}}>
 
             </div>
         </main>
