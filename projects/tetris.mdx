@@ -2,7 +2,7 @@
 title: "Tetris - Arduino"
 date: "2022-03-22"
 short_description: "I re-created Tetris on an Arduino Mega"
-thumbnail: ""
+thumbnail: "/Tetris/Tetris_Thumb.jpg"
 featured: true
 ---
 
@@ -49,25 +49,27 @@ This started with getting the play area and a block to display anywhere on the g
 
 The grid is represented as a 2D array of integers. Different integers represent different block state. 0 is empty, 1 is locked, 2 is the current pieces, 3 is the center of the current piece. After getting blocks to fall and rotate as well as adding a store mechanic, ability to see the next shape, and a score counter. It was time to put the game together.
 
-<div class="my-0 flex md:flex-row flex-col justify-center">
-    <div class="px-4">
-        <img class="mb-0 w-3/4 mx-auto" src="/Tetris/game_area.jpg"/>
+<div class="my-0 flex md:flex-row flex-col justify-evenly">
+    <div class="px-4 w-1/4">
+        <img class="mb-0 mx-auto" src="/Tetris/game_area.jpg"/>
         <div class="text-center">Game Area</div>
     </div>
-    <div class="px-4">
-        <img class="mb-0 w-3/4 mx-auto" src="/4_3_test.jpg"/>
+    <div class="px-4 w-1/4">
+        <img class="mb-0 mx-auto" src="/Tetris/title_screen.gif"/>
         <div class="text-center">Title Screen</div>
     </div>
-    <div class="px-4">
-        <img class="mb-0 w-3/4 mx-auto" src="/4_3_test.jpg"/>
+    <div class="px-4 w-1/4">
+        <img class="mb-0 mx-auto" src="/Tetris/game_over.gif"/>
         <div class="text-center">End Screen</div>
     </div>
 </div>
 
 After some tricky code to get the 7-segment display to refresh the way we wanted the game was polished. See demo below.
 
-<div class="px-4">
-        <img class="mb-0 w-3/4 mx-auto" src="/4_3_test.jpg"/>
+<div class="my-0 flex md:flex-row flex-col justify-evenly">
+    <div class="px-4 w-3/4">
+        <img class="mb-0 mx-auto" src="/Tetris/demo.gif"/>
         <div class="text-center">Gameplay</div>
+    </div>
 </div>
 
