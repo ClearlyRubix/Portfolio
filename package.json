@@ -14,7 +14,7 @@
     "next": "14.2.32",
     "react": "^18",
     "react-dom": "^18",
-    "react-email": "^3.0.7",
+    "react-email": "^5.0.5",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
     "remark-unwrap-images": "^4.0.0",
